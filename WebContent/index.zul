@@ -1,6 +1,50 @@
-<?page title="Auto Generated index.zul"?>
-<window title="Hello World!!" border="normal" width="200px">
+<?xml version="1.0" encoding="UTF-8"?>
+<?link rel="shortcut icon" href="/images/Sus_Icon.ico" ?>
+<?link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"?>
+<?link href="css/fonts.css" rel="stylesheet" type="text/css"?>
+<?link href="less/index.css.dsp" rel="stylesheet" type="text/css"?>
 
-<label value="You are using: ${desktop.webApp.version}"/>
+<zk xmlns:n="native">
 
-</window>
+	<vlayout id="layout" vflex="1" hflex="1" use="view.view_index">
+		
+		
+	    <include src="navbar.zul"/>   
+			         
+		<hlayout id="main" vflex="1" hflex="1" style="background:#eeeeee;">
+		
+		    <div id="sidebar" sclass="sidebar" apply="applications2.SidebarComposer" vflex="1"    style="overflow: auto;" >	
+				<navbar id="navbar" sclass="nav-list" orient="vertical" collapsed="false">
+				   			  				   							   			          								 																		
+							<nav label="Demo Data" iconSclass="z-icon-home">
+								<navitem label="Cal" iconSclass="z-icon-angle-double-right" onClick='layout.OnSelect_Menu("201_Cal.zul",self.getLabel(),self.getImage(),0,0)'/>					
+								<navitem label="Check" iconSclass="z-icon-angle-double-right" onClick='layout.OnSelect_Menu("202_Check.zul",self.getLabel(),self.getImage(),0,0)'/>	
+								<navitem label="Create Array" iconSclass="z-icon-angle-double-right" visible="false" onClick='layout.OnSelect_Menu("203_Create_Array.zul",self.getLabel(),self.getImage(),0,0)'/>	
+									
+								<nav label="Pyramid" iconSclass="z-icon-angle-double-right">
+									<navitem label="Pyramid 1" iconSclass="z-icon-angle-double-right" onClick='layout.OnSelect_Menu("101_Pyramid.zul",self.getLabel(),self.getImage(),0,0)'/>
+								</nav>			
+							</nav>		
+																											
+				</navbar>
+				 <div sclass="sidebar-collapse">
+					<a id="toggler" iconSclass="z-icon-angle-double-left"/>
+				</div>	
+														
+			</div>
+					
+			<vlayout vflex="1" hflex="1" style="background:#ffffff;">
+					<vlayout id="t" vflex="1" hflex="1">									    																	
+							<image src="/img/std.jpg" width="99.5%"></image>															    					        
+					</vlayout>
+					   
+					<tabbox id="Tabbox" vflex="1" hflex="1">
+						<tabs id="Tabs" vflex="1" hflex="1" style="background:#ffffff;"></tabs>
+						<tabpanels id="Tabpanels" vflex="1" hflex="1"></tabpanels>
+					</tabbox>
+			</vlayout>
+		
+		</hlayout>
+			
+    </vlayout>
+</zk>
