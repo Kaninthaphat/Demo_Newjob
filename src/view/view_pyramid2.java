@@ -14,7 +14,7 @@ public class view_pyramid2 {
 		Scanner a = new Scanner(System.in);
 		int count = getNum(a);
 		for(int i = 0; i<count; i++){
-			for(int j = 0; j< (count-i); j++){
+			for(int j = 0; j<(count-i); j++){
 				System.out.print(" ");
 			}
 			for(int k = 0; k< (i+1); k++){ 
